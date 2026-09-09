@@ -70,39 +70,38 @@ export const CurriculumSection = ({ onOpenWhatsapp }) => {
           {curriculumPhases.map((phaseData, idx) => {
             const isOpen = openPhase === idx;
 
+            // Gradasi menyambung dari atas (Minggu 1) ke bawah (Minggu 3)
+            const headerBg = [
+              'bg-gradient-to-r from-[#0E223F] via-[#1B365D] to-[#2A4E7A]',
+              'bg-gradient-to-r from-[#1B365D] via-[#00479B] to-[#0052CC]',
+              'bg-gradient-to-r from-[#0052CC] via-[#0063B8] to-[#007FAA]',
+            ][idx % 3];
+
             return (
               <div
                 key={idx}
-                className={`rounded-2xl border bg-white overflow-hidden transition-all duration-200 ${
-                  isOpen ? 'border-[#00205B] shadow-md' : 'border-slate-200 hover:border-slate-300 shadow-xs'
+                className={`rounded-2xl overflow-hidden transition-all duration-200 border ${
+                  isOpen ? 'border-[#00205B]/40 shadow-lg' : 'border-slate-200 hover:border-slate-300 shadow-xs'
                 }`}
               >
                 <button
                   onClick={() => setOpenPhase(isOpen ? null : idx)}
-                  className="w-full flex items-center gap-3 sm:gap-4 p-4 sm:p-5 text-left cursor-pointer focus:outline-none"
+                  className={`w-full flex items-center gap-3 sm:gap-4 p-4 sm:p-5 text-left cursor-pointer focus:outline-none ${headerBg}`}
                 >
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center font-extrabold text-base shrink-0 transition-colors ${
-                    isOpen ? 'bg-[#00205B] text-white' : 'bg-slate-100 text-slate-900'
-                  }`}>
-                    {String(idx + 1).padStart(2, '0')}
-                  </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap text-[11px] font-bold uppercase tracking-wider">
-                      <span className="bg-slate-100 text-slate-700 px-2 py-0.5 rounded">
+                      <span className="bg-white/15 text-white px-2 py-0.5 rounded border border-white/20">
                         {phaseData.weeks} ({phaseData.sessionRange})
                       </span>
-                      <span className="text-slate-400">• {phaseData.format}</span>
+                      <span className="text-white/70">• {phaseData.format}</span>
                     </div>
-                    <div className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight mt-1 leading-snug">
+                    <div className="text-base sm:text-lg font-extrabold text-white tracking-tight mt-1 leading-snug">
                       {phaseData.title}
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span className="hidden sm:block text-xs text-slate-400 font-medium whitespace-nowrap">
-                      {isOpen ? t.curriculum.hideDetail : t.curriculum.viewDetail}
-                    </span>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 ${
-                      isOpen ? 'rotate-180 bg-[#00205B]/10 text-[#00205B]' : 'bg-slate-100 text-slate-600'
+                  <div className="flex items-center shrink-0">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 bg-white/15 text-white ${
+                      isOpen ? 'rotate-180' : ''
                     }`}>
                       <ChevronDown className="w-4 h-4" />
                     </div>
