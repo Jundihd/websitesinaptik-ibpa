@@ -88,7 +88,7 @@ export const translations = {
     about: {
       badge: "About Program & Strategic Partnership",
       title: "Strategic Collaboration ITB × Sinaptik",
-      leadText: "The Executive Professional Education program \"Intelligent Business Process Automation\" is a strategic joint initiative between Institut Teknologi Bandung (ITB) and Sinaptik (a subsidiary of Radya Labs Group).",
+      leadText: "The Executive Professional Education program \"Intelligent Business Process Automation\" is a strategic joint initiative between Institut Teknologi Bandung (ITB) and Sinaptik (a member of Radya Labs Group).",
       description: "Designed to help you elevate efficiency, accuracy, and business competitiveness using artificial intelligence (AI), Robotic Process Automation (RPA), and Intelligent Automation with field-tested curriculum and real-world enterprise case studies."
     },
     pricing: {
@@ -232,7 +232,7 @@ export const translations = {
     about: {
       badge: "Tentang Program & Kemitraan Strategis",
       title: "Kolaborasi Strategis ITB × Sinaptik",
-      leadText: "Program Professional Education \"Intelligent Business Process Automation\" merupakan inisiatif kolaborasi strategis antara Institut Teknologi Bandung (ITB) dan Sinaptik (anak perusahaan Radya Labs Group).",
+      leadText: "Program Professional Education \"Intelligent Business Process Automation\" merupakan inisiatif kolaborasi strategis antara Institut Teknologi Bandung (ITB) dan Sinaptik (anggota dari Radya Labs Group).",
       description: "Dirancang untuk membantu Anda meningkatkan efisiensi, akurasi, dan daya saing bisnis melalui teknologi kecerdasan buatan (AI), Robotic Process Automation (RPA), dan Intelligent Automation dengan kurikulum teruji dan studi kasus industri nyata."
     },
     pricing: {
@@ -329,10 +329,6 @@ export const programDataEn = {
     }
   ],
   prerequisites: [
-    {
-      title: "Minimum 3 Years Professional Experience",
-      detail: "Possess at least 3 years of work experience in Operations, IT, Business Process Improvement, or Digital Transformation."
-    },
     {
       title: "Understanding of Business Processes & SOPs",
       detail: "Understand workflows, value chains, and operational SOPs within your unit or organization."
@@ -452,7 +448,7 @@ export const programDataEn = {
       "Access to Modules, Code Blueprints & AI RPA Workflow Templates",
       "Capstone Project with Real Corporate Business Case Study",
       "Official Certificate of Completion from ITB & Sinaptik",
-      "Direct Q&A & Mentoring with ITB Faculty & Senior Practitioners",
+      "Direct Q&A & Mentoring with ITB Faculty & Industry Practitioners",
       "Access to Professional Education Alumni Community"
     ],
     groupFeatures: [
@@ -588,10 +584,6 @@ export const programDataId = {
   ],
   prerequisites: [
     {
-      title: "Pengalaman Kerja Minimal 3 Tahun",
-      detail: "Memiliki pengalaman kerja minimal 3 tahun di bidang Operations, IT, Business Process Improvement, atau Digital Transformation."
-    },
-    {
       title: "Pemahaman Proses Bisnis & SOP",
       detail: "Memahami alur kerja, rantai nilai (value chain), dan SOP operasional di unit atau organisasi tempat bekerja."
     },
@@ -710,7 +702,7 @@ export const programDataId = {
       "Akses Modul, Code Blueprint & Template AI RPA Workflow",
       "Capstone Project dengan Real-World Case Study Perusahaan",
       "Sertifikat Kelulusan Resmi ITB & Sinaptik",
-      "Direct Q&A & Mentoring bersama Dosen ITB & Praktisi",
+      "Direct Q&A & Mentoring bersama Dosen ITB & Praktisi Industri",
       "Akses Komunitas Alumni Professional Education"
     ],
     groupFeatures: [

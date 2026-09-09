@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Video, MapPin, Award, ChevronDown, Cpu, Download, Sparkles } from 'lucide-react';
+import { Video, MapPin, Award, ChevronDown, Cpu, Download, Sparkles, Layers } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const CurriculumSection = ({ onOpenWhatsapp }) => {
   // Default to all closed (null) as shown in reference image
   const [openPhase, setOpenPhase] = useState(null);
-  const { t, programData } = useLanguage();
+  const { t, programData, lang } = useLanguage();
   const curriculumPhases = programData.curriculumPhases || [];
 
   return (
@@ -84,25 +84,18 @@ export const CurriculumSection = ({ onOpenWhatsapp }) => {
                   isOpen ? 'bg-slate-50/50' : 'bg-white'
                 }`}
               >
-                {/* Left Sidebar Block */}
+                {/* Left Sidebar Block — per Minggu */}
                 <div
-                  className={`${sidebarColors[idx % sidebarColors.length]} text-white p-6 md:p-8 md:w-80 shrink-0 flex flex-col justify-between`}
+                  className={`${sidebarColors[idx % sidebarColors.length]} text-white p-6 md:p-8 md:w-80 shrink-0 flex flex-col justify-center`}
                 >
                   <div className="space-y-2">
                     <div className="text-[11px] font-black uppercase tracking-widest text-white/80">
-                      {phaseData.phase}
+                      {phaseData.weeks}
                     </div>
 
                     <h3 className="text-lg sm:text-xl font-extrabold tracking-tight text-white leading-snug">
                       {phaseData.title}
                     </h3>
-                  </div>
-
-                  <div className="pt-4 mt-3 border-t border-white/20 flex items-center justify-between text-xs font-semibold text-white/90">
-                    <span>{phaseData.weeks} ({phaseData.sessionRange})</span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded text-white">
-                      {phaseData.formatType === 'onsite' ? 'Onsite ITB' : 'Online'}
-                    </span>
                   </div>
                 </div>
 
@@ -123,9 +116,35 @@ export const CurriculumSection = ({ onOpenWhatsapp }) => {
                     </div>
                   </button>
 
-                  {/* Expandable "What you'll learn:" content */}
+                  {/* Expandable detail: sesi, metode, + materi */}
                   {isOpen && (
                     <div className="mt-6 pt-6 border-t border-slate-200 animate-fade-in space-y-4">
+                      {/* Sesi & Metode */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                          <div className="w-9 h-9 rounded-lg bg-[#00205B]/10 text-[#00205B] flex items-center justify-center shrink-0">
+                            <Layers className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                              {lang === 'en' ? 'Sessions' : 'Jumlah Sesi'}
+                            </div>
+                            <div className="text-sm font-bold text-slate-900">{phaseData.sessionRange}</div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                          <div className="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
+                            {phaseData.formatType === 'onsite' ? <MapPin className="w-5 h-5" /> : <Video className="w-5 h-5" />}
+                          </div>
+                          <div>
+                            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                              {lang === 'en' ? 'Learning Method' : 'Metode Belajar'}
+                            </div>
+                            <div className="text-sm font-bold text-slate-900">{phaseData.format}</div>
+                          </div>
+                        </div>
+                      </div>
+
                       <div className="text-xs font-extrabold uppercase tracking-wider text-slate-900 flex items-center gap-2">
                         <Sparkles className="w-4 h-4 text-emerald-600" />
                         <span>{t.curriculum.keyTopics || "Yang akan Anda pelajari (Highlights):"}</span>
