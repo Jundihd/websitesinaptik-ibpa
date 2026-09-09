@@ -19,13 +19,13 @@ function MainApp() {
     
     const textMessageEn = `Hello Admin Sinaptik & ITB Professional Education,
 
-I am interested in registering/consulting regarding the Executive Professional Education Program: Intelligent Business Process Automation (Cohort September 2026).
+I am interested in registering/consulting regarding the Executive Professional Education Program: Intelligent Business Process Automation (Cohort October 2026).
 
 Please provide registration info, detailed syllabus, and corporate invoice/tax invoice details. Thank you.`;
 
     const textMessageId = `Halo Admin Sinaptik & ITB Professional Education,
 
-Saya tertarik mendaftar/berkonsultasi mengenai Program Professional Education: Intelligent Business Process Automation (Cohort September 2026).
+Saya tertarik mendaftar/berkonsultasi mengenai Program Professional Education: Intelligent Business Process Automation (Cohort Oktober 2026).
 
 Mohon informasi pendaftaran, rincian silabus, dan penawaran invoice/faktur pajak instansi. Terima kasih.`;
 

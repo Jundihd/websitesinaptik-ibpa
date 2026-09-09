@@ -2,19 +2,15 @@ import React from 'react';
 import { 
   ShieldCheck, 
   ArrowRight, 
-  CheckCircle2, 
-  Building, 
   Clock, 
   Award,
   Calendar,
-  PhoneCall,
   BookOpen
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const HeroSection = ({ onOpenWhatsapp }) => {
-  const { t, programData } = useLanguage();
-  const highlights = programData.heroHighlights || [];
+  const { t } = useLanguage();
 
   return (
     <section id="hero" className="relative py-6 sm:py-8 lg:py-10 border-b border-slate-200 lg:min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden">
@@ -96,21 +92,6 @@ export const HeroSection = ({ onOpenWhatsapp }) => {
               </div>
             </div>
 
-            {/* Feature Highlights */}
-            <div className="space-y-1.5 pt-0.5">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                {t.hero.highlightsTitle}
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                {highlights.slice(0, 4).map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-1.5 text-xs text-slate-700">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="line-clamp-2">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Buttons (Primary "Lihat Program" & Secondary "Silabus") - Placed at Bottom */}
             <div className="pt-3 flex flex-wrap items-center gap-3">
               <button
@@ -148,12 +129,6 @@ export const HeroSection = ({ onOpenWhatsapp }) => {
                     className="w-full h-full object-cover filter contrast-105 hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-                  
-                  {/* Clean Cohort Badge */}
-                  <div className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md text-white px-3 py-1 rounded-lg border border-white/20 text-xs font-bold flex items-center gap-2 shadow-md">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                    <span>Cohort September 2026</span>
-                  </div>
                 </div>
 
                 {/* Organizer Credential Info */}

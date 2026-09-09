@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 export const Navbar = ({ onOpenWhatsapp }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { lang, toggleLanguage, t } = useLanguage();
+  const { lang, setLang, t } = useLanguage();
 
   return (
     <header className="sticky top-0 z-50 transition-all duration-300 glass-panel border-b border-slate-200 shadow-xs">
@@ -65,21 +65,10 @@ export const Navbar = ({ onOpenWhatsapp }) => {
 
           {/* Action Area: Language Switcher + Full WhatsApp Button */}
           <div className="hidden sm:flex items-center gap-3 shrink-0">
-            {/* Language Switcher Toggle */}
+            {/* Language Switcher Toggle - ID first (default) */}
             <div className="flex items-center p-0.5 rounded-lg bg-slate-100 border border-slate-200 text-xs font-bold shrink-0">
               <button
-                onClick={() => toggleLanguage()}
-                className={`px-2.5 py-1 rounded-md text-[11px] font-bold transition-all cursor-pointer ${
-                  lang === 'en'
-                    ? 'bg-[#00205B] text-white shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
-                title="Switch to English"
-              >
-                EN
-              </button>
-              <button
-                onClick={() => toggleLanguage()}
+                onClick={() => setLang('id')}
                 className={`px-2.5 py-1 rounded-md text-[11px] font-bold transition-all cursor-pointer ${
                   lang === 'id'
                     ? 'bg-[#00205B] text-white shadow-xs'
@@ -88,6 +77,17 @@ export const Navbar = ({ onOpenWhatsapp }) => {
                 title="Switch to Bahasa Indonesia"
               >
                 ID
+              </button>
+              <button
+                onClick={() => setLang('en')}
+                className={`px-2.5 py-1 rounded-md text-[11px] font-bold transition-all cursor-pointer ${
+                  lang === 'en'
+                    ? 'bg-[#00205B] text-white shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="Switch to English"
+              >
+                EN
               </button>
             </div>
 
@@ -105,11 +105,11 @@ export const Navbar = ({ onOpenWhatsapp }) => {
           {/* Mobile Navigation Controls */}
           <div className="flex items-center gap-2 lg:hidden">
             <button
-              onClick={() => toggleLanguage()}
+              onClick={() => setLang(lang === 'id' ? 'en' : 'id')}
               className="flex items-center gap-1 px-2 py-1 rounded-md bg-slate-100 border border-slate-200 text-xs font-bold text-[#00205B]"
             >
               <Globe className="w-3.5 h-3.5" />
-              <span>{lang === 'en' ? 'EN' : 'ID'}</span>
+              <span>{lang === 'id' ? 'ID' : 'EN'}</span>
             </button>
 
             <button
@@ -132,20 +132,20 @@ export const Navbar = ({ onOpenWhatsapp }) => {
             </span>
             <div className="flex items-center p-0.5 rounded-lg bg-slate-100 border border-slate-200 text-xs font-bold">
               <button
-                onClick={() => { toggleLanguage(); }}
-                className={`px-3 py-1 rounded-md ${
-                  lang === 'en' ? 'bg-[#00205B] text-white' : 'text-slate-600'
-                }`}
-              >
-                English (EN)
-              </button>
-              <button
-                onClick={() => { toggleLanguage(); }}
+                onClick={() => { setLang('id'); }}
                 className={`px-3 py-1 rounded-md ${
                   lang === 'id' ? 'bg-[#00205B] text-white' : 'text-slate-600'
                 }`}
               >
                 Indonesia (ID)
+              </button>
+              <button
+                onClick={() => { setLang('en'); }}
+                className={`px-3 py-1 rounded-md ${
+                  lang === 'en' ? 'bg-[#00205B] text-white' : 'text-slate-600'
+                }`}
+              >
+                English (EN)
               </button>
             </div>
           </div>

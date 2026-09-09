@@ -4,9 +4,9 @@ import { translations, programDataEn, programDataId } from '../data/translations
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [lang, setLang] = useState('en'); // Default to English as requested
+  const [lang, setLang] = useState('id'); // Default to Indonesian
 
-  const t = translations[lang] || translations.en;
+  const t = translations[lang] || translations.id;
   const programData = lang === 'en' ? programDataEn : programDataId;
 
   const toggleLanguage = () => {

@@ -1,8 +1,8 @@
 export const translations = {
   en: {
     banner: {
-      tag: "Cohort September 2026",
-      text: "Early Bird Registration Open — Save IDR 1,000,000 Until August 20, 2026",
+      tag: "Cohort October 2026",
+      text: "Early Bird Registration Open — Save IDR 1,000,000 Until September 20, 2026",
       cta: "Claim Seat →"
     },
     nav: {
@@ -28,8 +28,8 @@ export const translations = {
       ctaPrimary: "View Program",
       ctaSyllabus: "Syllabus",
       startDateLabel: "START DATE",
-      startDateVal: "September 2026",
-      earlyBirdNote: "Early Bird until Aug 20",
+      startDateVal: "October 2026",
+      earlyBirdNote: "Early Bird until Sep 20",
       formatLabel: "FORMAT",
       formatVal: "Online & Offline (Hybrid)",
       formatSub: "6 Online + 2 Offline ITB",
@@ -96,7 +96,7 @@ export const translations = {
       title: "Program Investment Options",
       description: "Secure Early Bird pricing or register your corporate team under the Special Group Offer for maximum investment efficiency.",
       earlyBirdTag: "Individual / Early Bird",
-      earlyBirdDeadline: "Early Bird until Aug 20, 2026",
+      earlyBirdDeadline: "Early Bird until Sep 20, 2026",
       normalPriceLabel: "Standard Price:",
       earlyBirdSave: "Save IDR 1,000,000 (Nett per participant)",
       featuresLabel: "What's Included:",
@@ -120,9 +120,9 @@ export const translations = {
       contactBtn: "Chat with Admissions via WhatsApp"
     },
     ctaBanner: {
-      badge: "Cohort September 2026",
+      badge: "Cohort October 2026",
       title: "Ready to Transform Your Organization's Process Efficiency?",
-      description: "Join Cohort September 2026 of ITB Executive Professional Education & Sinaptik. Seats are strictly limited to ensure optimal mentoring quality.",
+      description: "Join Cohort October 2026 of ITB Executive Professional Education & Sinaptik. Seats are strictly limited to ensure optimal mentoring quality.",
       btnMain: "Register via WhatsApp Now",
       subNote: "Immediate response from official ITB & Sinaptik admissions team"
     },
@@ -145,8 +145,8 @@ export const translations = {
   },
   id: {
     banner: {
-      tag: "Cohort September 2026",
-      text: "Pendaftaran Early Bird Dibuka — Hemat Rp 1.000.000 Hingga 20 Agustus 2026",
+      tag: "Cohort Oktober 2026",
+      text: "Pendaftaran Early Bird Dibuka — Hemat Rp 1.000.000 Hingga 20 September 2026",
       cta: "Klaim Kuota →"
     },
     nav: {
@@ -172,8 +172,8 @@ export const translations = {
       ctaPrimary: "Lihat Program",
       ctaSyllabus: "Silabus",
       startDateLabel: "MULAI KELAS",
-      startDateVal: "September 2026",
-      earlyBirdNote: "Early Bird s/d 20 Ags",
+      startDateVal: "Oktober 2026",
+      earlyBirdNote: "Early Bird s/d 20 Sep",
       formatLabel: "FORMAT BELAJAR",
       formatVal: "Online & Offline (Hybrid)",
       formatSub: "6 Online + 2 Offline ITB",
@@ -240,7 +240,7 @@ export const translations = {
       title: "Pilihan Paket Investasi Program",
       description: "Dapatkan penawaran Early Bird atau daftarkan tim instansi Anda melalui Special Group Price untuk efisiensi investasi maksimal.",
       earlyBirdTag: "Perorangan / Early Bird",
-      earlyBirdDeadline: "Early Bird s/d 20 Ags 2026",
+      earlyBirdDeadline: "Early Bird s/d 20 Sep 2026",
       normalPriceLabel: "Harga Normal:",
       earlyBirdSave: "Hemat Rp 1.000.000 (Investasi nett per peserta)",
       featuresLabel: "Fasilitas Yang Didapat:",
@@ -264,9 +264,9 @@ export const translations = {
       contactBtn: "Konsultasi Langsung via WhatsApp"
     },
     ctaBanner: {
-      badge: "Cohort September 2026",
+      badge: "Cohort Oktober 2026",
       title: "Siap Mengakselerasi Efisiensi Proses Bisnis Organisasi Anda?",
-      description: "Bergabunglah dalam Cohort September 2026 ITB Executive Professional Education & Sinaptik. Kuota kelas terbatas untuk menjaga kualitas mentoring.",
+      description: "Bergabunglah dalam Cohort Oktober 2026 ITB Executive Professional Education & Sinaptik. Kuota kelas terbatas untuk menjaga kualitas mentoring.",
       btnMain: "Daftar via WhatsApp Sekarang",
       subNote: "Respon cepat dari tim admisi resmi ITB & Sinaptik"
     },
