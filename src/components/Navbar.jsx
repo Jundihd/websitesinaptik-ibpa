@@ -10,9 +10,6 @@ export const Navbar = ({ onOpenWhatsapp }) => {
     <header className="sticky top-0 z-50 transition-all duration-300 glass-panel border-b border-slate-200 shadow-xs">
       {/* Top Notice Banner */}
       <div className="bg-gradient-to-r from-[#001744] via-[#00205B] to-[#007FAA] text-white py-1.5 px-4 text-[11px] sm:text-xs font-semibold text-center flex items-center justify-center gap-2 flex-wrap">
-        <span className="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider border border-emerald-500/30">
-          {t.banner.tag}
-        </span>
         <span className="truncate max-w-full">
           {t.banner.text}
         </span>
