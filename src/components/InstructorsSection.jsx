@@ -88,13 +88,10 @@ export const InstructorsSection = () => {
                   </div>
                 </div>
 
-                {/* Bio & Quote */}
+                {/* Bio */}
                 <div className="space-y-3 pt-2">
                   <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
                     {mentor.bio}
-                  </p>
-                  <p className="text-xs text-slate-300 leading-relaxed border-l-2 border-[#49BCED] pl-3 italic">
-                    "{mentor.quote}"
                   </p>
                 </div>
 

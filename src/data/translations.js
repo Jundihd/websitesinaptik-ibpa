@@ -51,7 +51,7 @@ export const translations = {
     },
     instructors: {
       badge: "Faculty & Instructors",
-      title: "Learn Directly from ITB Academics & Sinaptik Senior Practitioners",
+      title: "Learn Directly from ITB Academics & Industry Practitioners",
       description: "Comprehensive curriculum combining academic rigor with real-world enterprise industry implementations.",
       linkedIn: "LinkedIn Profile",
       credentialsHeader: "Key Credentials & Track Record:"
@@ -195,7 +195,7 @@ export const translations = {
     },
     instructors: {
       badge: "Tim Pengajar & Instruktur",
-      title: "Belajar Langsung dari Kombinasi Akademisi ITB & Praktisi Senior Sinaptik",
+      title: "Belajar Langsung dari Kombinasi Akademisi ITB & Praktisi Industri",
       description: "Materi disajikan secara komprehensif memadukan kedalaman ilmiah akademik dengan implementasi nyata berstandar industri enterprise.",
       linkedIn: "Profil LinkedIn",
       credentialsHeader: "Rekam Jejak & Kredensial Utama:"
@@ -369,11 +369,11 @@ export const programDataEn = {
       role: "Co-Founder & Chief Innovation Officer Radya Labs Group",
       affiliation: "Sinaptik (Radya Labs Group) & Alumnus ITB",
       image: "/images/instructor_hari.png",
-      bio: "Co-Founder & CIO at Radya Labs Group with 15+ years driving digital transformation, Gen-AI copilot architectures, and Low-Code automation for 60+ enterprise clients. Holds an MBA from SBM ITB (GPA 3.78) and B.Sc. in Informatics Engineering from STEI ITB.",
+      bio: "Co-Founder & CIO at Radya Labs Group with 15+ years driving digital transformation, Gen-AI copilot architectures, and Low-Code automation for 60+ enterprise clients. Holds an MBA from SBM ITB and B.Sc. in Informatics Engineering from STEI ITB.",
       quote: "Successful business automation bridges cutting-edge AI innovation with real operational needs, multiplying productivity while keeping core systems secure and resilient.",
       credentials: [
         "Co-Founder & Chief Innovation Officer, PT Radya Anugrah Digital (Radya Labs Group)",
-        "MBA from SBM ITB (GPA 3.78) & B.Sc. Informatics Engineering STEI ITB",
+        "MBA from SBM ITB & B.Sc. Informatics Engineering STEI ITB",
         "15+ Years Leading 60+ Enterprise AI, Low-Code & Copilot Deployments",
         "AI Workshop Instructor for OCBC Bank, Pegadaian, Telkom, & Ministries"
       ],
@@ -628,11 +628,11 @@ export const programDataId = {
       role: "Co-Founder & Chief Innovation Officer Radya Labs Group",
       affiliation: "Sinaptik (Radya Labs Group) & Alumnus ITB",
       image: "/images/instructor_hari.png",
-      bio: "Co-Founder & CIO Radya Labs Group dengan 15+ tahun rekam jejak memimpin transformasi digital, Gen-AI copilot, dan Low-Code automation di 60+ proyek enterprise. Alumnus MBA SBM ITB (IPK 3.78) & Sarjana Teknik Informatika STEI ITB.",
+      bio: "Co-Founder & CIO Radya Labs Group dengan 15+ tahun rekam jejak memimpin transformasi digital, Gen-AI copilot, dan Low-Code automation di 60+ proyek enterprise. Alumnus MBA SBM ITB & Sarjana Teknik Informatika STEI ITB.",
       quote: "Otomatisasi bisnis yang sukses mengombinasikan kecanggihan Gen-AI & Low-Code dengan arsitektur enterprise teruji untuk melipatgandakan efisiensi tanpa mengganggu sistem inti.",
       credentials: [
         "Co-Founder & Chief Innovation Officer PT Radya Anugrah Digital (Radya Labs Group)",
-        "Lulusan Terbaik MBA SBM ITB (IPK 3.78) & Teknik Informatika STEI ITB",
+        "Lulusan Terbaik MBA SBM ITB & Teknik Informatika STEI ITB",
         "15+ Tahun Memimpin 60+ Proyek AI Enterprise, Copilot & Agentic Automation",
         "Instruktur Workshop AI & Low-Code di Bank OCBC, Pegadaian, Telkom, & Kemenkumham"
       ],
