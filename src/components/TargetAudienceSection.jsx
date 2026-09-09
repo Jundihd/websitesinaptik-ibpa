@@ -57,9 +57,9 @@ export const TargetAudienceSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
             {prerequisites.map((req, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+              <div key={idx} className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1 h-full">
                 <div className="text-xs font-bold text-[#49BCED] uppercase tracking-wider flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                   <span>{req.title}</span>
