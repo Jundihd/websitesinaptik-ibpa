@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelpCircle, ChevronDown, PhoneCall } from 'lucide-react';
+import { ChevronDown, PhoneCall } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const FaqSection = ({ onOpenWhatsapp }) => {
@@ -13,10 +13,6 @@ export const FaqSection = ({ onOpenWhatsapp }) => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#007FAA]/10 text-[#007FAA] text-xs font-bold uppercase tracking-wider">
-            <HelpCircle className="w-4 h-4" />
-            <span>{t.faq.badge}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.faq.title}
           </h2>

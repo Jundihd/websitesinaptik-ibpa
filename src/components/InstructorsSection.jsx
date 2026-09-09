@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, CheckCircle2, ExternalLink, GraduationCap, Building2 } from 'lucide-react';
+import { CheckCircle2, ExternalLink, GraduationCap, Building2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const InstructorsSection = () => {
@@ -17,10 +17,6 @@ export const InstructorsSection = () => {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#49BCED] text-xs font-bold uppercase tracking-wider border border-white/10">
-            <Users className="w-4 h-4 text-emerald-400" />
-            <span>{t.instructors.badge}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
             {t.instructors.title}
           </h2>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, CheckCircle2, UserCheck } from 'lucide-react';
+import { CheckCircle2, UserCheck } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const TargetAudienceSection = () => {
@@ -13,10 +13,6 @@ export const TargetAudienceSection = () => {
         
         {/* Header */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#007FAA]/10 text-[#007FAA] text-xs font-bold uppercase tracking-wider">
-            <Target className="w-4 h-4" />
-            <span>{t.targetAudience.badge}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             {t.targetAudience.title}
           </h2>
@@ -43,16 +39,6 @@ export const TargetAudienceSection = () => {
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                   {persona.description}
-                </p>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-slate-200 space-y-2">
-                <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>{t.targetAudience.impactLabel}</span>
-                </div>
-                <p className="text-xs text-slate-600 leading-relaxed italic">
-                  "{persona.impact}"
                 </p>
               </div>
             </div>

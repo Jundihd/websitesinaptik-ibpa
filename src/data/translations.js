@@ -459,7 +459,6 @@ export const programDataEn = {
       "All Individual Package Benefits (for 3+ Participants)",
       "Special Group Price: IDR 8,999,999 / person (Save IDR 2,000,000/person)",
       "Dedicated Corporate Case Study Consultation Session",
-      "Dedicated Admin Support for Invoicing, Corporate Tax Invoices & POs",
       "Team Attendance & Capstone Evaluation Report"
     ]
   },
@@ -718,7 +717,6 @@ export const programDataId = {
       "Seluruh Fasilitas Paket Perorangan (untuk 3+ Peserta)",
       "Harga Khusus Rombongan: Rp 8.999.999 / orang (Hemat Rp 2.000.000/orang)",
       "Sesi Konsultasi Studi Kasus Khusus Perusahaan",
-      "Dukungan Admin Khusus untuk Invoice, Faktur Pajak & PO Instansi",
       "Laporan Kehadiran & Evaluasi Capstone Tim"
     ]
   },

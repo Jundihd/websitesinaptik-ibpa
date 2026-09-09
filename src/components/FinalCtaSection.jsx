@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhoneCall, ShieldCheck, ArrowRight } from 'lucide-react';
+import { PhoneCall, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const FinalCtaSection = ({ onOpenWhatsapp }) => {
@@ -14,11 +14,6 @@ export const FinalCtaSection = ({ onOpenWhatsapp }) => {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
         
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#49BCED] text-xs font-bold uppercase tracking-wider border border-white/15">
-          <ShieldCheck className="w-4 h-4 text-emerald-400" />
-          <span>{t.ctaBanner.badge}</span>
-        </div>
-
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight max-w-4xl mx-auto">
           {t.ctaBanner.title}
         </h2>

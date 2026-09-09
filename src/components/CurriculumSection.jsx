@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Video, MapPin, Award, ChevronDown, Cpu, Download, Sparkles } from 'lucide-react';
+import { Video, MapPin, Award, ChevronDown, Cpu, Download, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const CurriculumSection = ({ onOpenWhatsapp }) => {
@@ -14,10 +14,6 @@ export const CurriculumSection = ({ onOpenWhatsapp }) => {
         
         {/* Header */}
         <div className="max-w-3xl mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00205B]/10 text-[#00205B] text-xs font-bold uppercase tracking-wider">
-            <BookOpen className="w-4 h-4 text-[#007FAA]" />
-            <span>{t.curriculum.badge}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             {t.curriculum.title}
           </h2>
@@ -154,10 +150,6 @@ export const CurriculumSection = ({ onOpenWhatsapp }) => {
         {/* WhatsApp Syllabus Request CTA Box */}
         <div className="mt-12 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#001744] via-[#00205B] to-[#003F55] text-white border border-slate-800 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
-              <Download className="w-3.5 h-3.5" />
-              <span>{t.curriculum.brochureTag}</span>
-            </div>
             <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
               {t.curriculum.brochureTitle}
             </h3>

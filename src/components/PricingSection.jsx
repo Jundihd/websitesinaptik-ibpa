@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, CheckCircle2, ArrowRight, PhoneCall, Globe, Users } from 'lucide-react';
+import { CheckCircle2, ArrowRight, PhoneCall, Globe, Users } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const PricingSection = ({ onOpenWhatsapp }) => {
@@ -15,10 +15,6 @@ export const PricingSection = ({ onOpenWhatsapp }) => {
         
         {/* Header */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#007FAA]/10 text-[#007FAA] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{t.pricing.badge}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             {t.pricing.title}
           </h2>
@@ -150,9 +146,6 @@ export const PricingSection = ({ onOpenWhatsapp }) => {
         {/* Contact Admisi Banner */}
         <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
           <div className="space-y-1 text-center md:text-left">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#007FAA] bg-[#007FAA]/10 px-2.5 py-0.5 rounded-md">
-              {t.pricing.contactTag}
-            </span>
             <h3 className="text-lg font-bold text-slate-900">
               {t.pricing.contactTitle}
             </h3>

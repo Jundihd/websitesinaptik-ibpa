@@ -1,5 +1,5 @@
 import React from 'react';
-import { Video, MapPin, Cpu, Award, ShieldCheck } from 'lucide-react';
+import { Video, MapPin, Cpu, Award } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const AboutSection = () => {
@@ -21,10 +21,6 @@ export const AboutSection = () => {
           {/* Left Description */}
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#007FAA]/10 text-[#007FAA] text-xs font-bold uppercase tracking-wider">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                <span>{t.about.badge}</span>
-              </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
                 {t.about.title}
               </h2>
@@ -32,10 +28,6 @@ export const AboutSection = () => {
 
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
               {t.about.leadText}
-            </p>
-
-            <p className="text-base text-slate-600 leading-relaxed font-normal">
-              {t.about.description}
             </p>
           </div>
 
