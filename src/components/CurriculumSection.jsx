@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { Video, MapPin, Award, ChevronDown, Cpu, Download, Sparkles, Layers } from 'lucide-react';
+import { Video, MapPin, Award, ChevronDown, Cpu, Download, Layers, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const CurriculumSection = ({ onOpenWhatsapp }) => {
   // Default to all closed (null) as shown in reference image
   const [openPhase, setOpenPhase] = useState(null);
+  const [openSession, setOpenSession] = useState(null);
   const { t, programData, lang } = useLanguage();
   const curriculumPhases = programData.curriculumPhases || [];
+  const curriculum = programData.curriculum || [];
+  // Minggu 1 = Sesi 1-3, Minggu 2 = Sesi 4-6, Minggu 3 = Sesi 7-8
+  const weekRanges = [[1, 3], [4, 6], [7, 8]];
 
   return (
     <section id="curriculum" className="py-20 bg-slate-50/60 border-b border-slate-200">
@@ -116,8 +120,13 @@ export const CurriculumSection = ({ onOpenWhatsapp }) => {
                     </div>
                   </button>
 
-                  {/* Expandable detail: sesi, metode, + materi */}
-                  {isOpen && (
+                  {/* Expandable detail: ringkasan sesi + daftar kartu sesi */}
+                  {isOpen && (() => {
+                    const [rangeStart, rangeEnd] = weekRanges[idx] || [0, 0];
+                    const weekSessions = curriculum.filter(
+                      (s) => s.sessionNum >= rangeStart && s.sessionNum <= rangeEnd
+                    );
+                    return (
                     <div className="mt-6 pt-6 border-t border-slate-200 animate-fade-in space-y-4">
                       {/* Sesi & Metode */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -145,21 +154,77 @@ export const CurriculumSection = ({ onOpenWhatsapp }) => {
                         </div>
                       </div>
 
-                      <div className="text-xs font-extrabold uppercase tracking-wider text-slate-900 flex items-center gap-2">
-                        <Sparkles className="w-4 h-4 text-emerald-600" />
-                        <span>{t.curriculum.keyTopics || "Yang akan Anda pelajari (Highlights):"}</span>
-                      </div>
+                      {/* Daftar kartu sesi dalam minggu ini */}
+                      <div className="space-y-3">
+                        {weekSessions.map((session) => {
+                          const sessionOpen = openSession === session.sessionNum;
+                          return (
+                            <div
+                              key={session.sessionNum}
+                              className={`rounded-2xl border bg-white overflow-hidden transition-all duration-200 ${
+                                sessionOpen ? 'border-[#00205B] shadow-md' : 'border-slate-200 hover:border-slate-300'
+                              }`}
+                            >
+                              <button
+                                onClick={() => setOpenSession(sessionOpen ? null : session.sessionNum)}
+                                className="w-full flex items-center gap-3 sm:gap-4 p-4 sm:p-5 text-left cursor-pointer focus:outline-none"
+                              >
+                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center font-extrabold text-base shrink-0 transition-colors ${
+                                  sessionOpen ? 'bg-[#00205B] text-white' : 'bg-slate-100 text-slate-900'
+                                }`}>
+                                  {String(session.sessionNum).padStart(2, '0')}
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center gap-2 flex-wrap text-[11px] font-bold uppercase tracking-wider">
+                                    <span className="bg-slate-100 text-slate-700 px-2 py-0.5 rounded">
+                                      {t.curriculum.sessionNumPrefix} {session.sessionNum} ({session.type})
+                                    </span>
+                                    <span className="text-slate-400">• {session.category}</span>
+                                  </div>
+                                  <div className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight mt-1 leading-snug">
+                                    {session.title}
+                                  </div>
+                                </div>
+                                <div className="flex items-center gap-2 shrink-0">
+                                  <span className="hidden sm:block text-xs text-slate-400 font-medium whitespace-nowrap">
+                                    {sessionOpen ? t.curriculum.hideDetail : t.curriculum.viewDetail}
+                                  </span>
+                                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 ${
+                                    sessionOpen ? 'rotate-180 bg-[#00205B]/10 text-[#00205B]' : 'bg-slate-100 text-slate-600'
+                                  }`}>
+                                    <ChevronDown className="w-4 h-4" />
+                                  </div>
+                                </div>
+                              </button>
 
-                      <ul className="space-y-3">
-                        {phaseData.learnItems.map((item, itemIdx) => (
-                          <li key={itemIdx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            <span className="w-2 h-2 rounded-full bg-[#00205B] mt-2 shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
+                              {sessionOpen && (
+                                <div className="px-4 sm:px-5 pb-5 pt-4 border-t border-slate-100 bg-slate-50/60 space-y-3">
+                                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    {session.summary}
+                                  </p>
+                                  <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+                                    {t.curriculum.keyTopics}
+                                  </div>
+                                  <div className="flex flex-wrap gap-2">
+                                    {session.topics.map((topic, topicIdx) => (
+                                      <span
+                                        key={topicIdx}
+                                        className="inline-flex items-center gap-1.5 text-xs text-slate-700 bg-white border border-slate-200 rounded-lg px-2.5 py-1.5"
+                                      >
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                                        {topic}
+                                      </span>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
-                  )}
+                    );
+                  })()}
                 </div>
               </div>
             );
