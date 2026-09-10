@@ -33,10 +33,6 @@ export const FinalCtaSection = ({ onOpenWhatsapp }) => {
           </button>
         </div>
 
-        <div className="pt-2 text-xs text-slate-400 flex items-center justify-center gap-4 flex-wrap">
-          <span>{t.ctaBanner.subNote}</span>
-        </div>
-
       </div>
     </section>
   );
