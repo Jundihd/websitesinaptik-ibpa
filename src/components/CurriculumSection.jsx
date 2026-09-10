@@ -109,47 +109,47 @@ export const CurriculumSection = ({ onOpenWhatsapp }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-5 pt-4 border-t border-slate-100 bg-slate-50/60 space-y-4">
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <div className={`px-4 sm:px-5 pb-5 pt-4 border-t border-white/20 space-y-4 ${headerBg}`}>
+                    <p className="text-xs sm:text-sm text-white/90 leading-relaxed font-semibold">
                       {phaseData.teaser}
                     </p>
 
                     {/* Jumlah sesi & metode */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-200">
-                        <div className="w-9 h-9 rounded-lg bg-[#00205B]/10 text-[#00205B] flex items-center justify-center shrink-0">
+                      <div className="flex items-center gap-3 p-3 rounded-xl bg-white/10 border border-white/20">
+                        <div className="w-9 h-9 rounded-lg bg-white/15 text-white flex items-center justify-center shrink-0">
                           <Layers className="w-5 h-5" />
                         </div>
                         <div>
-                          <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                          <div className="text-[10px] font-extrabold uppercase tracking-wider text-white/70">
                             {lang === 'en' ? 'Sessions' : 'Jumlah Sesi'}
                           </div>
-                          <div className="text-sm font-bold text-slate-900">{phaseData.sessionRange}</div>
+                          <div className="text-sm font-extrabold text-white">{phaseData.sessionRange}</div>
                         </div>
                       </div>
-                      <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-200">
-                        <div className="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
+                      <div className="flex items-center gap-3 p-3 rounded-xl bg-white/10 border border-white/20">
+                        <div className="w-9 h-9 rounded-lg bg-white/15 text-white flex items-center justify-center shrink-0">
                           {phaseData.formatType === 'onsite' ? <MapPin className="w-5 h-5" /> : <Video className="w-5 h-5" />}
                         </div>
                         <div>
-                          <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                          <div className="text-[10px] font-extrabold uppercase tracking-wider text-white/70">
                             {lang === 'en' ? 'Learning Method' : 'Metode Belajar'}
                           </div>
-                          <div className="text-sm font-bold text-slate-900">{phaseData.format}</div>
+                          <div className="text-sm font-extrabold text-white">{phaseData.format}</div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+                    <div className="text-[11px] font-extrabold uppercase tracking-wider text-white">
                       {t.curriculum.keyTopics}
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {phaseData.learnItems.map((item, itemIdx) => (
                         <span
                           key={itemIdx}
-                          className="inline-flex items-center gap-1.5 text-xs text-slate-700 bg-white border border-slate-200 rounded-lg px-2.5 py-1.5"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-white/10 border border-white/20 rounded-lg px-2.5 py-1.5"
                         >
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-300 shrink-0" />
                           {item}
                         </span>
                       ))}
